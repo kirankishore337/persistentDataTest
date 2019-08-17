@@ -54,14 +54,46 @@
 		9994EB122307F61B00F1F620 /* persistentDataTest */ = {
 			isa = PBXGroup;
 			children = (
-				9994EB132307F61B00F1F620 /* AppDelegate.swift */,
-				9994EB152307F61B00F1F620 /* ViewController.swift */,
+				9994EB282307F65600F1F620 /* Supporting Files */,
+				9994EB272307F63C00F1F620 /* Controller */,
+				9994EB262307F63600F1F620 /* View */,
+				9994EB252307F62900F1F620 /* Model */,
+			);
+			path = persistentDataTest;
+			sourceTree = "<group>";
+		};
+		9994EB252307F62900F1F620 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9994EB262307F63600F1F620 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				9994EB172307F61B00F1F620 /* Main.storyboard */,
 				9994EB1A2307F61D00F1F620 /* Assets.xcassets */,
 				9994EB1C2307F61D00F1F620 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9994EB272307F63C00F1F620 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9994EB132307F61B00F1F620 /* AppDelegate.swift */,
+				9994EB152307F61B00F1F620 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9994EB282307F65600F1F620 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				9994EB1F2307F61D00F1F620 /* Info.plist */,
 			);
-			path = persistentDataTest;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9N53T7P53;
-				INFOPLIST_FILE = persistentDataTest/Info.plist;
+				INFOPLIST_FILE = "persistentDataTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9N53T7P53;
-				INFOPLIST_FILE = persistentDataTest/Info.plist;
+				INFOPLIST_FILE = "persistentDataTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
