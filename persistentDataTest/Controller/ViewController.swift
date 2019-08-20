@@ -114,13 +114,13 @@ class ToDoViewController: UITableViewController {
     //MARK:- Core Data Methods
 
     func saveData() {
-        
+    
         do {
            try context.save()
         }catch {
             print("Error saving context\(error)")
         }
-        
+
         tableView.reloadData()
     }
     
