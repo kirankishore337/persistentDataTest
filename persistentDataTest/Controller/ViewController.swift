@@ -61,6 +61,7 @@ class ToDoViewController: UITableViewController {
             context.delete(itemArray[indexPath.row])
             itemArray.remove(at: indexPath.row)
             tableView.reloadData()
+            saveData()
         }
     }
     
