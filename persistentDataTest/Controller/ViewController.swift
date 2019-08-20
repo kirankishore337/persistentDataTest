@@ -51,12 +51,24 @@ class ToDoViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            context.delete(itemArray[indexPath.row])
+            itemArray.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
       
         
-//        context.delete(itemArray[indexPath.row])
-//        itemArray.remove(at: indexPath.row)
+
         
         
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
