@@ -37,7 +37,7 @@ class ToDoViewController: UITableViewController {
       //  cell.textLabel?.text = itemArray[indexPath.row].title
         
          cell.textLabel?.text = itemArray[indexPath.row].title
-         cell.detailTextLabel?.text = itemArray[indexPath.row].title
+        
        
         
       //  cell.accessoryType = itemArray[indexPath.row].done ? .checkmark : .none
@@ -57,7 +57,7 @@ class ToDoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
+            
             context.delete(itemArray[indexPath.row])
             itemArray.remove(at: indexPath.row)
             tableView.reloadData()
@@ -68,10 +68,6 @@ class ToDoViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
       
-        
-
-        
-        
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
         saveData()
@@ -113,6 +109,8 @@ class ToDoViewController: UITableViewController {
        alert.addAction(action)
        present(alert, animated: true, completion: nil)
     }
+    
+    //MARK:- Core Data Methods
 
     func saveData() {
         
@@ -125,6 +123,8 @@ class ToDoViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    
+    
     func fetchData(){
         
         let request  : NSFetchRequest<Item> = Item.fetchRequest()
@@ -134,7 +134,43 @@ class ToDoViewController: UITableViewController {
         {
              print("Error fetching data")
         }
+        tableView.reloadData()
     }
 
+}
+
+
+//MARK:- Search Bar Methods
+
+extension ToDoViewController : UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "title CONTAINS %@", searchBar.text!)
+        
+//        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+//        request.sortDescriptors = [sortDescriptor]
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        do {
+            itemArray = try context.fetch(request)
+        } catch
+        {
+            print("Error fetching data")                   //NSHipster NSPredicate
+        }
+        
+        tableView.reloadData()
+    }
+    
+//MARK:- Method to return original list after search
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            
+           fetchData()
+        }
+    }
 }
 
