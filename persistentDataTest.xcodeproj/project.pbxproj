@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		48B39C9DA8B5C9F5440CF7B2 /* Pods_persistentDataTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593DE1878B5F27CFB4A4FA5C /* Pods_persistentDataTest.framework */; };
 		9908F4B0230A1C1D00B83A32 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9908F4AE230A1C1D00B83A32 /* DataModel.xcdatamodeld */; };
-		9940778F230C5FE700D1D74D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940778E230C5FE700D1D74D /* Data.swift */; };
+		9985BCED230D13DE00765F16 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985BCEC230D13DE00765F16 /* CategoryViewController.swift */; };
 		9994EB142307F61B00F1F620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994EB132307F61B00F1F620 /* AppDelegate.swift */; };
-		9994EB162307F61B00F1F620 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994EB152307F61B00F1F620 /* ViewController.swift */; };
+		9994EB162307F61B00F1F620 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994EB152307F61B00F1F620 /* ToDoViewController.swift */; };
 		9994EB192307F61B00F1F620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9994EB172307F61B00F1F620 /* Main.storyboard */; };
 		9994EB1B2307F61D00F1F620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9994EB1A2307F61D00F1F620 /* Assets.xcassets */; };
 		9994EB1E2307F61D00F1F620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9994EB1C2307F61D00F1F620 /* LaunchScreen.storyboard */; };
@@ -20,16 +20,16 @@
 /* Begin PBXFileReference section */
 		593DE1878B5F27CFB4A4FA5C /* Pods_persistentDataTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_persistentDataTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9908F4AF230A1C1D00B83A32 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		9940778E230C5FE700D1D74D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9985BCEC230D13DE00765F16 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		9994EB102307F61B00F1F620 /* persistentDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = persistentDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9994EB132307F61B00F1F620 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9994EB152307F61B00F1F620 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9994EB152307F61B00F1F620 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		9994EB182307F61B00F1F620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9994EB1A2307F61D00F1F620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9994EB1D2307F61D00F1F620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9994EB1F2307F61D00F1F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADE6DCCAE38A3F0FDA3E3BEA /* Pods-persistentDataTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-persistentDataTest.debug.xcconfig"; path = "Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest.debug.xcconfig"; sourceTree = "<group>"; };
-		EC9E9E4BE0531944E6DB48B5 /* Pods-persistentDataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-persistentDataTest.release.xcconfig"; path = "Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest.release.xcconfig"; sourceTree = "<group>"; };
+		B91BAC4D6116AFF4673402AD /* Pods-persistentDataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-persistentDataTest.release.xcconfig"; path = "Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest.release.xcconfig"; sourceTree = "<group>"; };
+		E3CCD5DF470C463C607F4C1A /* Pods-persistentDataTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-persistentDataTest.debug.xcconfig"; path = "Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +55,8 @@
 		6970EAB954057C67242D96B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADE6DCCAE38A3F0FDA3E3BEA /* Pods-persistentDataTest.debug.xcconfig */,
-				EC9E9E4BE0531944E6DB48B5 /* Pods-persistentDataTest.release.xcconfig */,
+				E3CCD5DF470C463C607F4C1A /* Pods-persistentDataTest.debug.xcconfig */,
+				B91BAC4D6116AFF4673402AD /* Pods-persistentDataTest.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				9908F4AE230A1C1D00B83A32 /* DataModel.xcdatamodeld */,
-				9940778E230C5FE700D1D74D /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				9994EB132307F61B00F1F620 /* AppDelegate.swift */,
-				9994EB152307F61B00F1F620 /* ViewController.swift */,
+				9994EB152307F61B00F1F620 /* ToDoViewController.swift */,
+				9985BCEC230D13DE00765F16 /* CategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 				9994EB0C2307F61B00F1F620 /* Sources */,
 				9994EB0D2307F61B00F1F620 /* Frameworks */,
 				9994EB0E2307F61B00F1F620 /* Resources */,
-				AFBAA3651F9FBB50D704056B /* [CP] Embed Pods Frameworks */,
+				44FB82979509D8955508B1BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +195,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44FB82979509D8955508B1BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9DE5D6ACF702886122F524B8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,23 +234,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFBAA3651F9FBB50D704056B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-persistentDataTest/Pods-persistentDataTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,10 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9994EB162307F61B00F1F620 /* ViewController.swift in Sources */,
+				9985BCED230D13DE00765F16 /* CategoryViewController.swift in Sources */,
+				9994EB162307F61B00F1F620 /* ToDoViewController.swift in Sources */,
 				9908F4B0230A1C1D00B83A32 /* DataModel.xcdatamodeld in Sources */,
 				9994EB142307F61B00F1F620 /* AppDelegate.swift in Sources */,
-				9940778F230C5FE700D1D74D /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +388,7 @@
 		};
 		9994EB232307F61D00F1F620 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADE6DCCAE38A3F0FDA3E3BEA /* Pods-persistentDataTest.debug.xcconfig */;
+			baseConfigurationReference = E3CCD5DF470C463C607F4C1A /* Pods-persistentDataTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,7 +407,7 @@
 		};
 		9994EB242307F61D00F1F620 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC9E9E4BE0531944E6DB48B5 /* Pods-persistentDataTest.release.xcconfig */;
+			baseConfigurationReference = B91BAC4D6116AFF4673402AD /* Pods-persistentDataTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -16,6 +16,13 @@ class ToDoViewController: UITableViewController {
    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var selectedCategory : Category? {
+        
+        didSet{
+            fetchData()
+        }
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,7 +30,7 @@ class ToDoViewController: UITableViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
-       fetchData()
+       //fetchData()
        
     }
 
@@ -78,7 +85,7 @@ class ToDoViewController: UITableViewController {
     }
     
     @IBAction func buttonAdd(_ sender: UIBarButtonItem) {
-        
+    
         var textField = UITextField()
         
         let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
@@ -93,6 +100,7 @@ class ToDoViewController: UITableViewController {
             
             newItem.title = textField.text!
             newItem.done = false
+            newItem.parentCategory = self.selectedCategory
             self.itemArray.append(newItem)
            
             self.saveData()
@@ -126,9 +134,21 @@ class ToDoViewController: UITableViewController {
     
     
     
-    func fetchData(){
+    func fetchData(with request  : NSFetchRequest<Item> = Item.fetchRequest(), predicate : NSPredicate? = nil){
         
-        let request  : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+        
+        if let additionalPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate,additionalPredicate])
+        }else {
+            
+            request.predicate = categoryPredicate
+        }
+        
+//        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate,predicate])
+//        request.predicate = compoundPredicate
+        
         do {
         itemArray = try context.fetch(request)
         } catch
@@ -149,20 +169,12 @@ extension ToDoViewController : UISearchBarDelegate {
         
         let request : NSFetchRequest<Item> = Item.fetchRequest()
         
-        request.predicate = NSPredicate(format: "title CONTAINS %@", searchBar.text!)
+        let predicate = NSPredicate(format: "title CONTAINS %@", searchBar.text!)
         
-//        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-//        request.sortDescriptors = [sortDescriptor]
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
-        do {
-            itemArray = try context.fetch(request)
-        } catch
-        {
-            print("Error fetching data")                   //NSHipster NSPredicate
-        }
-        
-        tableView.reloadData()
+        fetchData(with: request,predicate: predicate)
+       
     }
     
 //MARK:- Method to return original list after search
